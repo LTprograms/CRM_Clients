@@ -1,48 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import RowClient from "../components/RowClient";
+import { getClients } from "../data/Clients";
 
 /**
  * This 'Loader' is similar to useEffect, whenever the component is ready, hook useLoaderData loads all data from loader
  * @returns data
  */
 export function loader() {
-    return [
-        {
-            id: 1,
-            name: 'Juan',
-            phone: 102013313,
-            email: "juan@juan.com",
-            bussiness: 'Codigo Con Juan'
-        },
-        {
-            id: 2,
-            name: 'Karen',
-            phone: 138198313,
-            email: "karen@juan.com",
-            bussiness: 'Codigo Con Juan'
-        },
-        {
-            id: 3,
-            name: 'Josue',
-            phone: 31983913,
-            email: "josue@juan.com",
-            bussiness: 'Codigo Con Juan'
-        },
-        {
-            id: 4,
-            name: 'Miguel',
-            phone: 319381983,
-            email: "miguel@juan.com",
-            bussiness: 'Codigo Con Juan'
-        },
-        {
-            id: 5,
-            name: 'Pedro',
-            phone: 1398198938,
-            email: "pedro@juan.com",
-            bussiness: 'Codigo Con Juan'
-        },
-    ];
+    return getClients();
 }
 /**
  * In this page we use a 'Loader'
